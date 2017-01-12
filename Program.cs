@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace ConsoleApplication
 {
@@ -56,7 +57,7 @@ public class Wizard : Human{
     //Human constuctor is expecting a string so you don't need to define the parameter as a string here
     public Wizard(string name): base(name){ 
         health = 50;
-        intelligence =25;
+        intelligence = 25;
     }
 
     public void heal(){
@@ -72,7 +73,7 @@ public class Wizard : Human{
 }
 
 public class Ninja : Human{
-    public Ninja(): base("n"){ 
+    public Ninja(string name): base(name){ 
         dexterity = 175;
     }
 
@@ -88,9 +89,13 @@ public class Ninja : Human{
 }
 
 public class Samurai : Human{
-    public Samurai(): base("n") {
+    public Samurai(string name): base(name) {
         health = 200;
+        instanceCount = instanceCount + 1;
     }
+
+    public static int instanceCount;
+
 
     public void death_blow(object victim){
         Human enemy = victim as Human;
@@ -104,8 +109,10 @@ public class Samurai : Human{
     }
 
     public void how_many(){
-        //displays how many Samurai there are
+        Console.WriteLine("There are " + instanceCount + " Samurai!");
+
     }
+
 
 }
 
@@ -114,9 +121,28 @@ public class Samurai : Human{
         public static void Main(string[] args)
         {
             Human qt = new Human("Amy");
-            Wizard liz = new Wizard("Liz");
-            System.Console.WriteLine(qt);
-            System.Console.WriteLine(liz);
+            Wizard harry = new Wizard("Harry");
+            Ninja liz = new Ninja("Liz");
+            Samurai jack = new Samurai("Jack");
+            Samurai bill = new Samurai("Bill");
+            Samurai allie = new Samurai("Allie");
+            Samurai seth = new Samurai("Seth");
+            // System.Console.WriteLine(qt.ToString());
+            // System.Console.WriteLine(harry.ToString());
+            System.Console.WriteLine(jack.ToString());
+            // System.Console.WriteLine(jack.ToString());
+
+            harry.fireball(jack);
+            System.Console.WriteLine(jack.ToString());
+            jack.death_blow(jack);
+            jack.meditate();
+            jack.how_many();
+            // System.Console.WriteLine(Samurai.instanceCount);
+            // liz.get_away();
+            // System.Console.WriteLine(harry.ToString());
+            System.Console.WriteLine(jack.ToString());
+            // System.Console.WriteLine(harry.ToString());
+            
         }
     }
 }

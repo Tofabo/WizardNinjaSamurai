@@ -1,5 +1,5 @@
---temp-output:/Users/allyson/Documents/Csharp/WizardNinjaSamurai/obj/Debug/netcoreapp1.0/
---out:/Users/allyson/Documents/Csharp/WizardNinjaSamurai/bin/Debug/netcoreapp1.0/WizardNinjaSamurai.dll
+--temp-output:/Users/allyson/Documents/Csharp/terminalRPG/obj/Debug/netcoreapp1.0/
+--out:/Users/allyson/Documents/Csharp/terminalRPG/bin/Debug/netcoreapp1.0/terminalRPG.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -9,7 +9,7 @@
 --optimize:False
 --debug-type:portable
 --emit-entry-point:True
---output-name:WizardNinjaSamurai
+--output-name:terminalRPG
 --file-version:1.0.0.0
 --version:1.0.0.0
 --informational-version:1.0.0
@@ -87,4 +87,5 @@
 --reference:/Users/allyson/.nuget/packages/System.Threading.Timer/4.0.1/ref/netstandard1.2/System.Threading.Timer.dll
 --reference:/Users/allyson/.nuget/packages/System.Xml.ReaderWriter/4.0.11/ref/netstandard1.3/System.Xml.ReaderWriter.dll
 --reference:/Users/allyson/.nuget/packages/System.Xml.XDocument/4.0.11/ref/netstandard1.3/System.Xml.XDocument.dll
-/Users/allyson/Documents/Csharp/WizardNinjaSamurai/Program.cs
+/Users/allyson/Documents/Csharp/terminalRPG/Enemies.cs
+/Users/allyson/Documents/Csharp/terminalRPG/Program.cs
